@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="page-header">
+        <h1>My Chirper Project</h1>
+    </div>
+    <div class="page-header">
+    </div>
+
+    <div class="chirp-box">
+        <select id="user-selector" ng-model="newUserId">
+                <option value="">Select a User</option>
+                <option value="{{ us.id }}" ng-repeat="us in users">{{ us.name }}</option>
+            </select>
+
+
+
+        <input type="text" placeholder="Put your chirp here!" id="chirp-field" size="35" ng-model="newMessage">
+        <button type="button" id="chirp-btn" ng-click="createChirp()">Chirp 
+                <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
+            </button>
+    </div>
+
+    <!-- The ng-click function createChirp is made in the controller.js.
+    So when this page is previewed, it looks at app.js for route, and controller.js for action. -->
+
+    <div id="chirp-list">
+        <!-- click on chirp will link to single_view.html -->
+        <a ng-href="/#!/Allchirps/{{ al.id }}" ng-repeat="al in Allchirps">
+            <div class="chirp">
+                <p>{{ al.message }}</p>
+                <h4>{{ al.username }}</h4>
+                <h5>{{ al.timestamp | date: 'short' }}</h5>
+            </div>
+        </a>
+    </div>
+</div>
+
+<!-- All mustach syntax is used from the database tables. -->

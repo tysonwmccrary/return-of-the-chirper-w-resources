@@ -1,0 +1,91 @@
+@font-face {
+  font-family: 'Courier New Bold', 'BEBAS___', 'Bangers' 'glyphicons-halflings';
+  src:url('fonts')
+}
+
+a {
+    color: black;
+}
+
+.page-header {
+text-align: center;
+margin: 25px;
+}
+
+p {
+    font-family: 'Courier New Bold'
+}
+
+h1 {
+    font-family: 'Bangers'
+}
+
+h4 {
+    font-family: 'Bangers'
+}
+
+h5 {
+    font-family: 'BEBAS___' 
+}
+
+body {
+    background-color: lightblue;
+}
+
+#chirp-message {
+     background: rgba(76, 175, 80, 0.3);
+}
+
+#chirp-field {
+    border-width: 6px;
+}
+
+#chirp-btn {
+    background-color: lightgray;
+    border: 1px solid black;
+    color: black;
+    border-radius: 0.5em;
+}
+
+#chirp-list {
+    background-color: lightblue;
+}
+
+#user-selector {
+    background-color: lightgray;
+}
+
+.chirp-box {
+    background-color: orange;
+    position: relative;
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    line-height: 25px;
+}
+
+.chirp {
+    position: relative;
+    background: rgba(76, 175, 80, 0.3);
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.delete-button {
+    /* position: relative; */
+    left: 950px;
+    bottom: 55px;
+    z-index: 10;
+    right: 0px;
+    border-radius: 0.5em;
+}
+ 
+#update-button {
+    margin: 15px;
+    border-radius: 0.5em;
+    bottom: 55px;
+}
