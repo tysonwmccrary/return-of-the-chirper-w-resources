@@ -60,7 +60,7 @@ angular.module('chirper.controllers', [])
 
         $scope.updateChirp = function () {
             $scope.chirp.$update(function () {
-                window.history.back();
+                $location.replace().path('/Allchirps');
             }, function (error) {
                 console.log(error);
             });
