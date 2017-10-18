@@ -24,6 +24,7 @@ h4 {
     font-family: 'Bangers'
 }
 
+
 h5 {
     font-family: 'BEBAS___' 
 }
@@ -53,6 +54,19 @@ body {
 
 #user-selector {
     background-color: lightgray;
+}
+
+.update-box {
+    height: 40px;
+    width: 15%;
+    background-color: orange;
+    position: relative;
+    left: 270px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    text-align: left;
 }
 
 .chirp-box {

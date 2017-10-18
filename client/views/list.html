@@ -11,10 +11,11 @@
                 <option value="{{ us.id }}" ng-repeat="us in users">{{ us.name }}</option>
             </select>
 
+        <!-- All mustach syntax is used from the database tables. -->
 
 
         <input type="text" placeholder="Put your chirp here!" id="chirp-field" size="35" ng-model="newMessage">
-        <button type="button" id="chirp-btn" ng-click="createChirp()">Chirp 
+        <button type="button" id="chirp-btn" class="btn-md" ng-click="createChirp()">Chirp 
                 <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
             </button>
     </div>
@@ -23,7 +24,7 @@
     So when this page is previewed, it looks at app.js for route, and controller.js for action. -->
 
     <div id="chirp-list">
-        <!-- click on chirp will link to single_view.html -->
+        <!-- click on single chirp will link to single_view.html -->
         <a ng-href="/#!/Allchirps/{{ al.id }}" ng-repeat="al in Allchirps">
             <div class="chirp">
                 <p>{{ al.message }}</p>

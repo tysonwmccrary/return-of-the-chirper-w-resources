@@ -35,6 +35,7 @@ angular.module('chirper.controllers', [])
             $location.path('/Allchirps/' + $routeParams.someId + '/update');
         }
 
+
         //When clicked confirm if you are sure window.
         //This will use the route in app.js for single.view.html 
         //The location dependency is used becuase when deleteChirp is clicked it changes route. 
