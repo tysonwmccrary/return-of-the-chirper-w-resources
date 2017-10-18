@@ -3,13 +3,14 @@ angular.module('chirper.controllers', [])
 //When list.html is used, it will refer to this to show chirps, and create chirps.
     .controller('ChirpListController', ['$scope', 'Chirp', 'User', function ($scope, Chirp, User) { 
         function getChirps() {
-            $scope.Allchirps = Chirp.query(); //This query method will pull all varaiable of chirp that are used the SQL database.
-        }
+            $scope.Allchirps = Chirp.query(); //This query method will pull all data from Allchirps table in the SQL database.  
+        }                                     //Also this will create the variable for chirp that includes message, userid, and timestamp.
         getChirps();
 
-        $scope.users = User.query();
+        $scope.users = User.query();  //This query method will pull all data from user table in the SQL database.
+                                      //Also this will create the variable for user that includes the id attached to userid with foreign key to show names.
 
-        $scope.createChirp = function () {
+        $scope.createChirp = function () {  //
             var payload = {
                 message: $scope.newMessage,
                 userid: $scope.newUserId
@@ -31,7 +32,7 @@ angular.module('chirper.controllers', [])
     .controller('SingleChirpController', ['$scope', 'Chirp', '$location', '$routeParams', function ($scope, Chirp, $location, $routeParams) {
         $scope.chirp = Chirp.get({ id: $routeParams.someId });
 
-        $scope.updateChirp = function () {
+        $scope.editChirp = function () {
             $location.path('/Allchirps/' + $routeParams.someId + '/update');
         }
 
@@ -55,6 +56,7 @@ angular.module('chirper.controllers', [])
     //The location dependency is used because routeParams is used.
     .controller('UpdateChirpController', ['$scope', 'Chirp', '$location', '$routeParams', function ($scope, Chirp, $location, $routeParams) {
         $scope.chirp = Chirp.get({ id: $routeParams.someId });
+        //console.log($scope.chirp); //Test to console to see if I am getting id, message, timestamp, and username.
 
         $scope.updateChirp = function () {
             $scope.chirp.$update(function () {
